@@ -8,50 +8,44 @@ public class Mathey {
      * public static ...
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int max(int x, int y){
+    public static int max(int x, int y) {
         if (x > y) {
             return x;
-        }
-        else {
+        } else {
             return y;
         }
     }
-
 
 
     /* Write another method called max that takes **two doubles**
      * Ex. max(1.2, 4.0) => 4.0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static double max(double x, double y){
+    public static double max(double x, double y) {
         if (x > y) {
             return x;
-        }
-        else {
+        } else {
             return y;
         }
     }
-
 
 
     /* Write another method called max that takes **three integers**
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int max(int x, int y, int z){
+    public static int max(int x, int y, int z) {
         return max(max(x, y), z);
     }
-
 
 
     /* Write another method called max that takes **four doubles**
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static double max(double w, double x, double y, double z){
+    public static double max(double w, double x, double y, double z) {
         return max(max(max(x, y), z), w);
     }
-
 
 
     /* Write a method that takes **two integers** and generates a random
@@ -63,10 +57,9 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int randomInteger(int x, int y){
-        return (int) Math.random()* (1-y+x) + x;
+    public static int randomInteger(int x, int y) {
+        return (int) Math.random() * (1 - y + x) + x;
     }
-
 
 
     /* Write a method that takes **one integer** and generates a random
@@ -77,13 +70,9 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int randomInteger(int x){
-        return (int) (Math.random()*(x+1));
+    public static int randomInteger(int x) {
+        return (int) (Math.random() * (x + 1));
     }
-
-
-
-
 
 
     // YOU MAY WORK ON THE FOLLOWING METHODS IF YOU FINISH EARLY
@@ -95,14 +84,13 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int pow(int x, int y){
+    public static int pow(int x, int y) {
         int answer = 1;
-        for (int i = 1; i <= x; i++){
+        for (int i = 1; i <= x; i++) {
             answer *= y;
         }
         return answer;
     }
-
 
 
     /* Write a method that takes **one integer** and returns the
@@ -111,15 +99,13 @@ public class Mathey {
      *     abs(-2) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int abs(int x){
-        if (x>=0){
+    public static int abs(int x) {
+        if (x >= 0) {
             return x;
-        }
-        else{
-            return x*-1;
+        } else {
+            return x * -1;
         }
     }
-
 
 
     /* Write a method that takes **one double** and returns the
@@ -129,12 +115,10 @@ public class Mathey {
      *     round(2.5) => 3
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int round(double x){
+    public static int round(double x) {
         x += 0.5;
         return (int) x;
     }
-
-
 
 
     /* Write a method that takes **one double** and returns the
@@ -146,11 +130,9 @@ public class Mathey {
      *     floor(2.999999999999) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int floor(double x){
+    public static int floor(double x) {
         return (int) x;
     }
-
-
 
 
     /* Write a method that takes **one double** and returns the
@@ -162,12 +144,10 @@ public class Mathey {
      *     ceil(3.01) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int ceil(double x){
+    public static int ceil(double x) {
         x += 0.9;
         return (int) x;
     }
-
-
 
 
     /* Calculates the square root iteratively, using the Babylonian method
@@ -179,9 +159,15 @@ public class Mathey {
 
         while (Math.abs(prev - x1) > 0.0001) {
             prev = x1;
-            x1 = (x1 + x/x1) / 2;
+            x1 = (x1 + x / x1) / 2;
         }
 
         return x1;
+    }
+
+    public static int pythag(int a, int b) {
+        int d = (a*a) + (b*b);
+        int c = (int) (sqrt(d));
+        return c;
     }
 }

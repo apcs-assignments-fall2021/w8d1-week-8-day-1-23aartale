@@ -65,6 +65,9 @@ public class MyMain {
         System.out.println("Mathey.sqrt tests");
         System.out.println(Mathey.sqrt(9));
         System.out.println(Mathey.sqrt(16));
+
+        System.out.println("Mathey.pythag tests");
+        System.out.println(Mathey.pythag(3,4));
     }
 
 }
